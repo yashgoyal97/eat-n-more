@@ -27,11 +27,12 @@
     3. Yash Page (Developer's Profile)
 
 ### Main
-* Fetch data
+* Fetch data using `createAsyncThunk`
 * Populate 
-    1. Top restaurant chains
+    1. What's on your mind?
+    2. Top restaurant chains
         * Restaurant cards
-    2. Restaurants with online food delivery
+    3. Restaurants with online food delivery
         * Heading
         * Filter Widget (Data used from main API)
         * Restaurant cards
