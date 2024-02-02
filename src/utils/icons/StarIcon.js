@@ -1,6 +1,6 @@
 import React from "react";
 
-const RatingStar = () => {
+const StarIcon = () => {
   return (
     <svg
       width="20"
@@ -39,4 +39,4 @@ const RatingStar = () => {
   );
 };
 
-export default RatingStar;
+export default StarIcon;

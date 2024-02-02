@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import MagnifyingGlass from "../utils/icons/MagnifyingGlass";
+import SearchIcon from "../utils/icons/SearchIcon";
 
 const Input = () => {
   const [expanded, setExpanded] = useState(false);
@@ -32,7 +32,7 @@ const Input = () => {
         }
       />
       <div className="p-2 w-[50px] h-[50px] flex justify-center items-center absolute top-0 right-2 cursor-pointer">
-        <MagnifyingGlass />
+        <SearchIcon />
       </div>
     </div>
   );

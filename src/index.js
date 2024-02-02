@@ -6,11 +6,30 @@ import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { store } from "./state/store";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Error from "./routes/Error";
+import AppBody from "./components/ui/AppBody";
+import Cart from "./routes/Cart";
+import Restaurant from "./routes/Restaurant";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: "/",
+        element: <AppBody />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
+      {
+        path: "/restaurant/:resId",
+        element: <Restaurant />,
+      },
+    ],
   },
 ]);
 

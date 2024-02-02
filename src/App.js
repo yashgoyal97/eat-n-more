@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import AppBody from "./components/ui/AppBody";
 import AppHeader from "./components/ui/AppHeader";
 import { useDispatch } from "react-redux";
-import { fetchAppData } from "./state/main/mainSlice";
+import { fetchAppData } from "./state/restaurants/restaurantsSlice";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const dispatch = useDispatch();
@@ -14,8 +14,7 @@ function App() {
   return (
     <>
       <AppHeader />
-      <hr />
-      <AppBody />
+      <Outlet />
     </>
   );
 }
