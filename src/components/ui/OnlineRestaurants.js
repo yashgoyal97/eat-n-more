@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const OnlineRestaurants = ({ data }) => {
   // const dispatch = useDispatch();
   const { restaurantNumber, onlineRestaurants: restaurants } = useSelector(
-    (state) => state.restaurants
+    (state) => state.main
   );
 
   /**

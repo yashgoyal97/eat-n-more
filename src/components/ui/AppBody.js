@@ -5,11 +5,10 @@ import TopRestaurants from "./TopRestaurants";
 import OnlineRestaurants from "./OnlineRestaurants";
 
 const AppBody = () => {
-  const data = useSelector((state) => state.restaurants.data);
-  // calc(10% + 36px)
+  const data = useSelector((state) => state.main.data);
   if (!data) {
     return (
-      <div className="w-9/12 m-auto py-4 text-2xl font-bold">Loading...</div>
+      <div className="w-9/12 m-auto py-4 text-xl font-bold">Loading...</div>
     );
   }
 

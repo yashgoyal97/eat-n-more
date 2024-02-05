@@ -35,7 +35,7 @@
 
 # Phase 2
 ## Restaurant Page
-## Cart Pag
+## Cart Page
 ## Developer Dropdown
 * Profile (Portfolio)
 * Code/Documentation (GitHub)
@@ -43,6 +43,8 @@
 
 
 # Phase 3
+## Responsive Design
+
 ## Fetch Restaurants
 * Infinite Scroll [https://www.youtube.com/watch?v=NZKUirTtxcg]
 * Filter
@@ -50,4 +52,9 @@
 
 
 # Challenges
+## Fetch Restaurants
+* Infinite Scroll [https://www.youtube.com/watch?v=NZKUirTtxcg]
+* Filter
+* Search
+
 

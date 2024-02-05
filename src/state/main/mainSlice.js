@@ -7,8 +7,8 @@ const initialState = {
   restaurantNumber: null,
 };
 
-const restaurantsSlice = createSlice({
-  name: "restaurants",
+const mainSlice = createSlice({
+  name: "main",
   initialState,
   extraReducers: (builder) => {
     builder
@@ -25,7 +25,7 @@ const restaurantsSlice = createSlice({
   },
 });
 
-export const { updateRestaurantNumber } = restaurantsSlice.actions;
+export const { updateRestaurantNumber } = mainSlice.actions;
 
 export const fetchAppData = createAsyncThunk("main/fetchAppData", async () => {
   try {
@@ -41,10 +41,10 @@ export const fetchAppData = createAsyncThunk("main/fetchAppData", async () => {
 
 // Fetch restaurant list on infinite scroll, filter and search
 export const fetchRestaurantsData = createAsyncThunk(
-  "restaurants/fetchRestaurantsData",
+  "main/fetchRestaurantsData",
   async (option) => {
     console.log(option);
   }
 );
 
-export default restaurantsSlice.reducer;
+export default mainSlice.reducer;
