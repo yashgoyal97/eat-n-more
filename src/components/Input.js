@@ -1,41 +1,67 @@
-import React, { useEffect, useRef, useState } from "react";
-import SearchIcon from "../utils/icons/SearchIcon";
+import React, { forwardRef, useEffect, useRef, useState } from "react";
+import ErrorIcon from "../utils/icons/ErrorIcon";
 
-const Input = () => {
-  const [expanded, setExpanded] = useState(false);
-  const inputRef = useRef(null);
+const Input = forwardRef((props, ref) => {
+  const { placeholder, pattern, required, label, type } = props;
+  const [value, setValue] = useState("");
+  const [error, setError] = useState("");
+  const [first, setfirst] = useState(true);
 
   useEffect(() => {
-    const input = inputRef.current;
-    if (expanded) {
-      input.disabled = false;
-      input.focus();
-    } else {
-      input.disabled = true;
-      input.value = "";
+    if (!first) {
+      validate();
     }
-  }, [expanded]);
+    setfirst(false);
+  }, [value]);
+
+  const validate = () => {
+    const input = ref.current;
+    const validityState = input.validity;
+    if (validityState.valueMissing) {
+      setError("Please fill out this field");
+    } else if (!validityState.valid) {
+      setError("Invalid field value");
+    } else {
+      setError("");
+    }
+  };
+
   return (
     <div
-      className="search relative text-black"
-      onClick={() => setExpanded(!expanded)}
+      className={
+        "relative bg-stone-100 " + (error ? "px-5 border border-red-500" : "")
+      }
     >
-      <input
-        ref={inputRef}
-        placeholder={expanded ? "Search" : ""}
-        disabled
+      <label
         className={
-          "h-[50px] py-2 px-5 bg-white border-0 outline-none transition-all ease-in duration-200 " +
-          (expanded
-            ? "w-80 focus:border-2 rounded focus:border-orange-600"
-            : "w-[50px]")
+          "absolute left-5 top-3 text-sm text-gray-500 " +
+          (value ? "block " : "hidden ")
         }
+      >
+        {label ? label : placeholder}
+      </label>
+      <input
+        ref={ref}
+        placeholder={placeholder}
+        className={
+          "w-full py-5 px-5 border-b border-b-gray-500 block focus:outline-none focus:border-b-2 focus:border-b-orange-600 bg-stone-100 " +
+          (value ? "pt-9 pb-4 text-lg " : "") +
+          (error ? "px-0" : "")
+        }
+        pattern={pattern}
+        required={required}
+        type={type}
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
       />
-      <div className="p-2 w-[50px] h-[50px] flex justify-center items-center absolute top-0 right-2 cursor-pointer">
-        <SearchIcon />
-      </div>
+      {error && (
+        <div className="flex justify-between items-center">
+          <span className="text-red-500 text-sm py-2">{error}</span>
+          <ErrorIcon />
+        </div>
+      )}
     </div>
   );
-};
+});
 
 export default Input;

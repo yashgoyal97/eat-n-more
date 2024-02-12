@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Input from "../Input";
 import logo from "../../utils/pictures/logo.png";
 import profile from "../../utils/pictures/profile.jpg";
 import CartIcon from "../../utils/icons/CartIcon";
 import { useSelector } from "react-redux";
+import SearchInput from "../SearchInput";
 
 const AppHeader = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -30,7 +30,7 @@ const AppHeader = () => {
           />
         </Link>
         <nav className="flex items-center gap-16">
-          <Input />
+          <SearchInput />
           <Link to="/profile">
             <div className="flex items-center gap-2 font-medium transition-all ease-in duration-200 hover:text-orange-600 hover:scale-[115%]">
               <img className="w-10 rounded-full" src={profile} />

@@ -36,6 +36,7 @@
 # Phase 2
 ## Restaurant Page
 ## Cart Page
+* Enhancement: For a order, add items only from one restaurant
 ## Developer Dropdown
 * Profile (Portfolio)
 * Code/Documentation (GitHub)

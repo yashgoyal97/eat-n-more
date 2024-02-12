@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { ITEM_IMAGE } from "../utils/images";
 import { useDispatch, useSelector } from "react-redux";
 import AddToCartBtn from "./AddToCartBtn";
 import { addToCart, removeItem } from "../state/cart/cartSlice";
+import { useParams } from "react-router-dom";
 
 const ItemCard = ({ data }) => {
   const dispatch = useDispatch();
 
   const count = useSelector((state) => {
     if (state.cart.data && state.cart.data.hasOwnProperty(data.id)) {
-        return state.cart.data[data.id].count;
+      return state.cart.data[data.id].count;
     }
   });
 
