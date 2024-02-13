@@ -54,8 +54,8 @@
 
 # Challenges
 ## Fetch Restaurants
-* Infinite Scroll [https://www.youtube.com/watch?v=NZKUirTtxcg]
-* Filter
-* Search
+* Fetching the dynamic list of restaurants on Infinite scroll, filter and search.
+* The 'Update' API used by swiggy is not an open API.
+* Solution: Add the response of swiggy API as mock data and then use it.
 
 
