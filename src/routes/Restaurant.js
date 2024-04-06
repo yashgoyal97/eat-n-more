@@ -32,7 +32,9 @@ const Restaurant = () => {
     );
   }
 
-  const [resDetails, offers, menu] = restaurantData.cards;
+  const resDetails = restaurantData.cards[2];
+  const offers = restaurantData.cards[3].card?.card?.gridElements?.infoWithStyle?.offers;
+  const menu = restaurantData.cards[4];
   const categories = menu?.groupedCard?.cardGroupMap?.REGULAR?.cards;
 
   return (

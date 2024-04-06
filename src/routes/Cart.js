@@ -9,6 +9,9 @@ const Cart = () => {
     (state) => state.address.isAddressFormOpen
   );
   const addressList = useSelector((state) => state.address.addressList);
+  const cartItems = useSelector((state) => state.cart.data);
+
+  console.log({ cartItems });
 
   return (
     <div className="w-100vw h-full bg-gray-200 py-8">
@@ -21,9 +24,11 @@ const Cart = () => {
         <div className="flex gap-8">
           <div className="flex-[4] flex-col gap-5">
             <Address addressList={addressList} />
-            <div className="bg-white p-8 border border-red-500">Payments</div>
+            {/* <div className="bg-white p-8 border border-red-500">Payments</div> */}
           </div>
-          <div className="flex-[2] bg-white p-5 h-fit border border-red-500">Items</div>
+          <div className="flex-[2] bg-white p-5 h-fit border border-red-500">
+            Items
+          </div>
         </div>
       </div>
     </div>

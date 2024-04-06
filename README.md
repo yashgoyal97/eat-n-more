@@ -20,7 +20,7 @@
 * Navigation/Route Links
     1. Search (Expandable on click)
     2. Cart Page
-    3. Yash Page (Developer's Profile)
+    3. Developer's Profile
 ### Main
 * Fetch data using `createAsyncThunk`
 * Populate 
@@ -45,6 +45,9 @@
 
 # Phase 3
 ## Responsive Design
+
+# Phase 4
+## Integrate location API with the system to get restaurants for live location.
 
 ## Fetch Restaurants
 * Infinite Scroll [https://www.youtube.com/watch?v=NZKUirTtxcg]
