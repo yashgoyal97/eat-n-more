@@ -62,3 +62,7 @@
 * Solution: Add the response of swiggy API as mock data and then use it.
 
 
+# 27/04/2024
+* Show items in cart
+* Blurr background on new address
+* Only one restaurant items in cart

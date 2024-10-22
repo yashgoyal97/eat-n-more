@@ -31,12 +31,12 @@ const AppHeader = () => {
         </Link>
         <nav className="flex items-center gap-16">
           <SearchInput />
-          <Link to="/profile">
+          {/* <Link to="/profile">
             <div className="flex items-center gap-2 font-medium transition-all ease-in duration-200 hover:text-orange-600 hover:scale-[115%]">
               <img className="w-10 rounded-full" src={profile} />
               <span>&lt;YashGoyal &#47;&gt;</span>
             </div>
-          </Link>
+          </Link> */}
           <Link to="/cart">
             <div
               onMouseOver={() => setIsHovered(true)}
@@ -54,11 +54,11 @@ const AppHeader = () => {
               <span>Cart</span>
             </div>
           </Link>
-          {/* <Link to="/profile">
+          <Link to="/profile">
             <div className="flex items-center gap-2 font-medium transition-all ease-in duration-200 hover:text-orange-600 hover:scale-[115%]">
               <img className="w-10 rounded-full" src={profile} />
             </div>
-          </Link> */}
+          </Link>
         </nav>
       </div>
     </div>
