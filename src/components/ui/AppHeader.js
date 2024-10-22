@@ -26,6 +26,7 @@ const AppHeader = () => {
         <Link to="/">
           <img
             src={logo}
+            alt="logo"
             className="w-40 transition-all ease-in duration-100 hover:scale-110"
           />
         </Link>
@@ -56,7 +57,7 @@ const AppHeader = () => {
           </Link>
           <Link to="/profile">
             <div className="flex items-center gap-2 font-medium transition-all ease-in duration-200 hover:text-orange-600 hover:scale-[115%]">
-              <img className="w-10 rounded-full" src={profile} />
+              <img className="w-10 rounded-full" alt="profile" src={profile} />
             </div>
           </Link>
         </nav>

@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { closeAddressForm } from "../state/address/addressSlice";
 
 const Sidebar = ({ openSidebar = true, heading = "Heading", children }) => {
   const dispatch = useDispatch();
   //   const [open, setOpen] = useState(openSidebar);
-
+  
   //   const openSidebar = () => {
   //     setOpen(true);
   //   };

@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { APP_DATA, UPDATE_RES_DATA } from "../../utils/constants";
+import { APP_DATA } from "../../utils/constants";
 
 const initialState = {
   data: null,

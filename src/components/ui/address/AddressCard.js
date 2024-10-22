@@ -19,7 +19,7 @@ const AddressCard = ({ address }) => {
 
   useEffect(() => {
     setCurrentAddress(address ? address : currentAddress);
-  }, []);
+  }, [address, currentAddress]);
 
   const openAddressForm = () => {
     dispatch(showAddressForm());

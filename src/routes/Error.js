@@ -1,9 +1,9 @@
 import React from "react";
-import { Link, useRouteError } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../utils/pictures/logo.png";
 
 const Error = () => {
-  const error = useRouteError();
+  // const error = useRouteError();
   return (
     <div className="h-screen flex flex-col gap-5 justify-center items-center">
       <p className="font-medium text-xl">The page you are looking for is</p>
@@ -12,6 +12,7 @@ const Error = () => {
       <Link to="/">
         <img
           src={logo}
+          alt="error"
           className="w-40 transition-all ease-in duration-100 hover:scale-110"
         />
       </Link>

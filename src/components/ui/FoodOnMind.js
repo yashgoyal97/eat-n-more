@@ -9,7 +9,7 @@ const FoodOnMind = ({ data }) => {
         {data.gridElements?.infoWithStyle?.info?.map((item) => {
           return (
             <div key={item.id} className="min-w-max cursor-pointer">
-              <img src={FOOD_ON_MIND + item.imageId} className="w-36 h-44" />
+              <img src={FOOD_ON_MIND + item.imageId} alt="food" className="w-36 h-44" />
             </div>
           );
         })}

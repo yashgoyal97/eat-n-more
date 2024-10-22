@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useRef, useState } from "react";
+import React, { forwardRef, useEffect, useState } from "react";
 import ErrorIcon from "../utils/icons/ErrorIcon";
 
 const Input = forwardRef((props, ref) => {
@@ -12,6 +12,7 @@ const Input = forwardRef((props, ref) => {
       validate();
     }
     setfirst(false);
+    // eslint-disable-next-line
   }, [value]);
 
   const validate = () => {

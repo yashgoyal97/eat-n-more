@@ -7,7 +7,7 @@ const RestaurantMenu = ({ categories }) => {
     setExpandIndex(
       categories[1].card.card["@type"].includes("MenuCarousel") ? 2 : 1
     );
-  }, []);
+  }, [categories]);
 
   return (
     <div className="m-5">
@@ -40,7 +40,7 @@ const RestaurantMenu = ({ categories }) => {
                 <div></div> */}
               </div>
             );
-          } else return;
+          } else return <></>;
         })}
     </div>
   );

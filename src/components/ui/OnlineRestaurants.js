@@ -1,20 +1,20 @@
-import React, { useCallback, useRef } from "react";
+import React from "react";
 import RestaurantCard from "../RestaurantCard";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 // import { fetchRestaurantsData } from "../../state/restaurants/restaurantsSlice";
 // import { REQ_PAYLOAD_SCROLL } from "../../utils/constants";
 
 const OnlineRestaurants = ({ data }) => {
   // const dispatch = useDispatch();
-  const { restaurantNumber, onlineRestaurants: restaurants } = useSelector(
+  const { onlineRestaurants: restaurants } = useSelector(
     (state) => state.main
   );
 
   /**
    * Code to fetch restaurants on Infinite scroll
    */
-
+  
   // const observer = useRef();
   // const lastRestaurantRef = useCallback((node) => {
   //   if (observer.current) observer.current.disconnect();
@@ -37,16 +37,17 @@ const OnlineRestaurants = ({ data }) => {
       <h1 className="text-2xl font-bold pl-4">{data.title}</h1>
       <div className="grid grid-cols-4 gap-8 mx-4 my-8">
         {restaurants?.length > 0 &&
-          restaurants.map((res, index) => {
-            {
-              /* if (index === restaurants.length - 1) {
-              return (
-                <div key={res.info.id} ref={lastRestaurantRef}>
-                  <RestaurantCard res={res} isOnlineRes={isOnlineRes} />
-                </div>
-              );
-            } */
-            }
+          restaurants.map((res) => {
+            // eslint-disable-next-line
+            {/* {
+              if (index === restaurants.length - 1) {
+                return (
+                  <div key={res.info.id} ref={lastRestaurantRef}>
+                    <RestaurantCard res={res} isOnlineRes={isOnlineRes} />
+                  </div>
+                );
+              }
+            } */}
             return (
               <div key={res.info.id} className="transition-all ease-in duration-100 hover:scale-95 min-w-52">
                 <Link to={`/restaurant/${res.info.id}`}>

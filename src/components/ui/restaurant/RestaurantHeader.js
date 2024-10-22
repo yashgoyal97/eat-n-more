@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import TimeIcon from "../../../utils/icons/TimeIcon";
 import CostIcon from "../../../utils/icons/CostIcon";
 

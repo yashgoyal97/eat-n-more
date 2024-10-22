@@ -20,7 +20,7 @@ const Restaurant = () => {
     return () => {
       dispatch(reset());
     };
-  }, []);
+  }, [dispatch, resId]);
 
   const { restaurantData } = useSelector((state) => state.restaurant);
 

@@ -3,7 +3,7 @@ import { ITEM_IMAGE } from "../utils/images";
 import { useDispatch, useSelector } from "react-redux";
 import AddToCartBtn from "./AddToCartBtn";
 import { addToCart, removeItem } from "../state/cart/cartSlice";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 const ItemCard = ({ data }) => {
   const dispatch = useDispatch();

@@ -11,6 +11,7 @@ const RestaurantCard = ({ res, isOnlineRes }) => {
             "w-full rounded-2xl object-cover mb-3 " +
             (isOnlineRes ? "h-36" : "h-44")
           }
+          alt="restaurant"
           src={TOP_RESTAURANT + res.info.cloudinaryImageId}
         />
       </div>
